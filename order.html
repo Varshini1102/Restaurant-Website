@@ -1,0 +1,513 @@
+<html>
+    <head>
+        <title> FOOD </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        nav {
+            background-color: lavenderblush;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav .mainMenu {
+            display: flex;
+            list-style: none;
+        }
+        nav .mainMenu li a {
+            display: inline-block;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: Lavenda;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+        nav .mainMenu li a:hover {
+             background: palevioletred;
+        }
+        nav .openMenu {
+            font-size: 2rem;
+             margin: 20px;
+            display: none;
+            cursor: pointer;
+        }
+        nav .mainMenu .closeMenu{
+            font-size: 2rem;
+            display: none;
+            cursor: pointer;
+        }
+ 
+        .logo {
+        margin: 6px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+        font-family: Cafe Brasil;
+    }
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 70vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      transition: top 1s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: palevioletred;
+    }
+    .addcart {
+        margin-top: 10px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+}
+.addcart {
+    padding: 8px 16px;
+    background-color: palevioletred;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 4px;
+    position: relative;
+    top: -10px;
+    right: -10px;
+}
+    
+.food {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 20px;
+}
+
+.food .fooditems {
+    border: 2px solid black;
+    background-color: mistyrose;
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.fooditems img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: palevioletred;
+    padding: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fooditems img:hover {
+    transform: scale(1.1);
+}
+
+.fooditems .foodtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.fooditems .foodprice {
+    font-weight: bold;
+    font-size: 16px;
+    color: red;
+    margin: 0;
+}
+
+.addct {
+    padding: 5px 10px;
+    background-color: palevioletred;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addct:hover {
+    background-color: white;
+}
+
+.addc {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 80%;
+    max-width: 400px;
+    background-color:whitesmoke;
+    color: black;
+    box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+    padding: 20px;
+    z-index: 100;
+    transition: right 0.4s ease;
+    overflow-y: auto;
+}
+
+.addc-active {
+    right: 0;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cartbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid palevioletred;
+}
+
+.cart-img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.detail-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-price {
+    font-weight: bold;
+}
+
+.cart-amt {
+    font-weight: bold;
+}
+
+.cart-quantity {
+    color: black;
+    background-color: white;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.cart-remove {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.total-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.total-price {
+    font-weight: 500;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.btn-buy {
+    padding: 10px 5px;
+    border: 2px solid white;
+    background-color: palevioletred;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.btn-buy:hover {
+    background-color: white;
+    color: black;
+}
+
+#cart-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+    </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo"><h1>THE SPICE DELIGHT</h1></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a href="review.html">REVIEW</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="reserve.html">RESERVATION</a></li>
+                <li><button class="addcart">CART</button></li>
+                <div class="cart-count">0</div>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+        </nav>
+        <div class="addc">
+            <div class="card-title">Cart items</div>
+            <div class="cart-content">
+                  
+            </div> 
+          
+            <div class="total">
+                  <a class="btn-buy" href="checkout.html">Place Order</a>
+                <i class="fa fa-close" id="cart-close" ></i>  
+                <div class="total-title">Total</div>
+                <div class="total-price">Rs.0</div>
+            </div>
+            
+        </div>
+        <div class="food">
+            <div class="fooditems">
+                    <img src="./veg1.jpeg" id="img2" />
+                    <p class="foodtitle"> MUSHROOM SOUP </p>
+                    <p class="foodprice"> Rs. 230 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./veg2.jpeg" id="img2" />
+                <p class="foodtitle"> BROCOLI PASTA </p>
+                <p class="foodprice"> Rs. 180 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./momos.webp" id="img2" />
+                <p class="foodtitle"> MOMOS </p>
+                <p class="foodprice"> Rs. 210 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./veg schezwan fried rice.jpg" id="img2" />
+                <p class="foodtitle"> VEG SCHEZWAN RICE </p>
+                <p class="foodprice"> Rs. 120 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./cheesy peri peri fries.jpeg" id="img2" />
+                <p class="foodtitle"> CHEESY FRIES </p>
+                <p class="foodprice"> Rs. 200 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./cheesy pink pasta.jpeg" id="img2" />
+                <p class="foodtitle"> CHEESY PINK PASTA </p>
+                <p class="foodprice"> Rs. 230 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./mushroom garlic bread.jpg" id="img2" />
+                <p class="foodtitle">MUSHROOM  BREAD </p>
+                <p class="foodprice"> Rs. 340 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./paneer pizza.jpg" id="img2" />
+                <p class="foodtitle">PANNER PIZZA </p>
+                <p class="foodprice"> Rs. 250 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./punjabi thali.jpg" id="img2" />
+                <p class="foodtitle">PUNJABI THALI </p>
+                <p class="foodprice"> Rs. 180 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./schezwan paneer tikka.webp" id="img2" />
+                <p class="foodtitle">SCHEZWAN PANEER  </p>
+                <p class="foodprice"> Rs. 110 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./arabian platter.jpeg" id="img2" />
+                <p class="foodtitle">Arabian Platter  </p>
+                <p class="foodprice"> Rs. 220 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./chicken pizza.jpeg" id="img2" />
+                <p class="foodtitle">Chicken Pizza  </p>
+                <p class="foodprice"> Rs. 400 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./mutton pepper fry.jpeg" id="img2" />
+                <p class="foodtitle">Mutton Pepper Fry  </p>
+                <p class="foodprice"> Rs. 330 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./barbecue fish.jpg" id="img2" />
+                <p class="foodtitle">Barbecue Fish </p>
+                <p class="foodprice"> Rs. 320 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./Dragon Chicken.jpg" id="img2" />
+                <p class="foodtitle">Dragon Chicken </p>
+                <p class="foodprice"> Rs. 310 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./fish fingers.jpg" id="img2" />
+                <p class="foodtitle">Fish Fingers  </p>
+                <p class="foodprice"> Rs. 350 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./grilled chicken.jpg" id="img2" />
+                <p class="foodtitle">Grilled chicken  </p>
+                <p class="foodprice"> Rs. 350 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./Prawn Biryani.jpg" id="img2" />
+                <p class="foodtitle">Prawn Briyani </p>
+                <p class="foodprice"> Rs. 250 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./schezwan chicken fried rice.jpg" id="img2" />
+                <p class="foodtitle">Schezwan chicken rice  </p>
+                <p class="foodprice"> Rs. 180 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+            <div class="fooditems">
+                <img src="./Tandoori Chicken.jpg" id="img2" />
+                <p class="foodtitle">Tandoori Chicken  </p>
+                <p class="foodprice"> Rs. 330 </p>
+                <button class="addct">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+        
+        <script src="style.js"></script>
+        <srcipt src="jquery-3.7.1.js"></srcipt>
+
+        <script>
+            const mainMenu = document.querySelector('.mainMenu');
+            const closeMenu = document.querySelector('.closeMenu');
+            const openMenu = document.querySelector('.openMenu');
+            const menu_items = document.querySelectorAll('nav .mainMenu li a');
+            openMenu.addEventListener('click',show);
+            closeMenu.addEventListener('click',close);
+    
+            menu_items.forEach(item => {
+                item.addEventListener('click',function(){
+                close();
+                })
+            })
+    
+            function show(){
+                mainMenu.style.display = 'flex';
+                mainMenu.style.top = '0';
+            }
+            function close(){
+                mainMenu.style.top = '-100%';
+            }
+        </script>
+    </body>
+</html>

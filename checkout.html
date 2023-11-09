@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <title>Checkout Page</title>
+ 
+  <style>
+        body {
+            background-color: lavenderblush;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+ 
+    .form-control {
+      width: 500px;
+      height: 40px;
+    }
+    .container-fluid.form{
+        background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid form">
+    <h1 align="center"> Checkout</h1>
+    <form id="checkout-form">
+    <center>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+        <small class="text-danger" id="name-error"></small>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+        <small class="text-danger" id="email-error"></small>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" class="form-control" id="address" placeholder="Your Address" required>
+        <small class="text-danger" id="address-error"></small>
+      </div>
+      <div class="form-group">
+        <label for="credit-card">Credit Card No:</label>
+        <input type="text" class="form-control" id="credit-card" placeholder="16-digit Card No" required>
+        <small class="text-danger" id="credit-card-error"></small>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV:</label>
+        <input type="text" class="form-control" id="cvv" placeholder="3-digit CVV" required>
+        <small class="text-danger" id="cvv-error"></small>
+      </div>
+      <div class="form-group">
+        <label for="exp-year">Expiration Year:</label>
+        <select class="form-control" id="exp-year" required>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+          <option value="2027">2027</option>
+          <option value="2028">2028</option>
+          <option value="2029">2029</option>
+          <option value="2030">2030</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exp-month">Expiration Month:</label>
+        <select class="form-control" id="exp-month" required>
+          <option value="Jan">Jan</option>
+          <option value="Feb">Feb</option>
+          <option value="Mar">Mar</option>
+          <option value="Apr">Apr</option>
+          <option value="May">May</option>
+          <option value="Jun">Jun</option>
+          <option value="Jul">Jul</option>
+          <option value="Aug">Aug</option>
+          <option value="Sep">Sep</option>
+          <option value="Oct">Oct</option>
+          <option value="Nov">Nov</option>
+          <option value="Dec">Dec</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Place Order</button>
+    </center>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('checkout-form');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  // Perform validation here and display errors in the respective error elements
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const address = document.getElementById('address').value;
+  const creditCard = document.getElementById('credit-card').value;
+  const cvv = document.getElementById('cvv').value;
+
+  // Validation logic for each field
+  if (!/^[A-Za-z\s]+$/.test(name)) {
+    document.getElementById('name-error').textContent = 'Only alphabets are allowed';
+    return; // Stop processing if there is an error
+  } else {
+    document.getElementById('name-error').textContent = '';
+  }
+
+  if (!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)) {
+    document.getElementById('email-error').textContent = 'Invalid email address';
+    return;
+  } else {
+    document.getElementById('email-error').textContent = '';
+  }
+
+  if (!/^[A-Za-z0-9\s]+$/.test(address)) {
+    document.getElementById('address-error').textContent = 'Only alphanumeric characters are allowed';
+    return;
+  } else {
+    document.getElementById('address-error').textContent = '';
+  }
+
+  if (!/^\d{16}$/.test(creditCard)) {
+    document.getElementById('credit-card-error').textContent = 'Invalid credit card number. Please enter 16 digits.';
+    return;
+  } else {
+    document.getElementById('credit-card-error').textContent = '';
+  }
+
+  if (!/^\d{3}$/.test(cvv)) {
+    document.getElementById('cvv-error').textContent = 'Please enter 3-digit CVV.';
+    return;
+  } else {
+    document.getElementById('cvv-error').textContent = '';
+  }
+
+  // If all validations pass, redirect to the desired page
+  alert('Your order is successfully placed');
+  window.location.href = "home.html";
+});
+
+  </script>
+</body>
+</html>

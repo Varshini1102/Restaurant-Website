@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+       body {
+  background-color: lavenderblush;
+  
+}
+nav {
+            background-color: lavenderblush;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav .mainMenu {
+            display: flex;
+            list-style: none;
+        }
+        nav .mainMenu li a {
+            display: inline-block;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: Lavenda;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+        nav .mainMenu li a:hover {
+             background: palevioletred;
+        }
+        nav .openMenu {
+            font-size: 2rem;
+             margin: 20px;
+            display: none;
+            cursor: pointer;
+        }
+        nav .mainMenu .closeMenu{
+            font-size: 2rem;
+            display: none;
+            cursor: pointer;
+        }
+ 
+        .logo {
+        margin: 6px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 24px;
+        font-family: Cafe Brasil;
+    }
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 70vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      transition: top 1s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: palevioletred;
+    }
+}
+ button {
+      background-color: palevioletred;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+
+
+    .form {
+  width: 40%;
+  border: 3px solid lavenderblush;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 90px; /* Add margin to the left side */
+}
+
+    #f1 {
+      width: 100%;
+      height: 50px;
+    }
+
+    .footer-column{
+        margin-right: 20px;
+    }
+
+        /* Added for responsiveness */
+        @media (max-width: 800px) {
+            .footer-column iframe {
+                width: 100%;
+                height: 300px;
+            }
+
+            .form-container .form {
+                width: 90%;
+                margin: 10px auto;
+            }
+
+            /* Make text centered on smaller screens for better appearance */
+            nav .logo h1 {
+                text-align: center;
+            }
+        }
+        .container-fluid.footer{
+    background-color: black;
+   height: auto;
+}
+.container-fluid.root{
+    background-color: white;
+    height: 250px;
+    width: 350px;
+}
+#root1{
+    color: palevioletred;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+#root2{
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+#root2 a{
+    text-decoration: none;
+    color: palevioletred;
+}
+#root2 a:hover{
+    text-decoration: none;
+}
+#root3 a{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: palevioletred;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 4px;
+    border: 2px solid black;
+}
+#copy{
+    color: whitesmoke;
+    font-size: 20px;
+}
+    header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            font-family: Arial,sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+  <div class="logo"><h1>THE SPICE DELIGHT</h1></div>
+  <div class="openMenu"><i class="fa fa-bars"></i></div>
+  <ul class="mainMenu">
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="order.html">ORDER</a></li>
+      <li><a href="review.html">REVIEW</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="reserve.html">RESERVATION</a></li>
+      <div class="closeMenu"><i class="fa fa-times"></i></div>
+  </ul>
+</nav>
+<header>
+  <h1>MAKE DINE WITH US</h1>
+</header>
+<br><br><br>
+<div class="footer-column">
+                 <iframe  align='right' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.46980712491!2d80.26894167463331!3d13.069384462727815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52661ca3e23e5f%3A0x6de474e685aead0f!2sMount%20Road%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1694755061509!5m2!1sen!2sin"
+            width="700" height="380"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="form-container px-4">
+  <div class="form">
+  <center>
+    <form id="contactForm">
+      <h2>RESERVE YOUR TABLE HERE!!!</h2>
+      <input type="text" name="name" placeholder="Your Name" id="f1" pattern="[A-Za-z]{5,30}" required/><br><br>
+      <input type="email" name="email" placeholder="Your Email" id="f1" required /><br><br>
+      <input type="date" name="dob" placeholder="Date" id="f1" min="2023-09-22" max="2023-12-31" required /><br><br>
+      <input type="time" name="time" placeholder="Time" id="f1" required /><br><br>
+      <input type="number" name="number" placeholder="Total number of members between 1 to 9" min="1" max="9" id="f1" required /><br><br>
+      <textarea name="message" placeholder="Your Message" id="f1" required></textarea><br><br>
+      <button type="button" id="bt1">BOOK</button>
+    </form>
+	</center>
+  </div>
+</div>
+<hr size="40px" width="50%" color="black" />
+<div class="container-fluid footer">
+  <div class="container">
+      <div class="row-md">
+          <div class="col-md-4">
+              <div class="container-fluid root">
+                  <br><br>
+                  <center>
+                  <h4 id="root1"> ADDRESS:</h4>
+                  <p id="root2"> 157, KKK Street</p>
+                  <p id="root2"> Mount Road</p>
+                  <p id="root2"> CHENNAI-600433.</p>
+                  </center>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="container-fluid root">
+                  <br><br>
+                  <center>
+                  <h4 id="root1"> OPEN HOURS:</h4>
+                  <p id="root2"> Monday - Saturday</p>
+                  <p id="root2"> 11am - 10pm</p>
+                  <p id="root2"> Sunday</p>
+                  <p id="root2"> 12am - 12pm</p>
+                  </center>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="container-fluid root">
+                  <br><br>
+                  <center>
+                  <h4 id="root1">Contact Us:</h4>
+                  <p id="root2"> Phone: <a href="tel:+917871281705">7871281705</a></p>
+                  <p id="root2">Mail: <a href="mailto:thespicydelight@gmail.com">thespicydelight@gmail.com</a></p>
+                  <p id="root3"><a href="reserve.html">RESERVATION</a> </p>
+                  <p id="root3"><a href="order.html">ORDER ONLINE</a> </p>
+                  </center>
+              </div>
+          </div>
+          <center>
+              <p id="copy">&copy; 2023 The Spice Delight Restaurant. All rights reserved.</p>
+          </center>
+      </div>
+  </div>
+</div>
+    <script>
+
+const mainMenu = document.querySelector('.mainMenu');
+            const closeMenu = document.querySelector('.closeMenu');
+            const openMenu = document.querySelector('.openMenu');
+            const menu_items = document.querySelectorAll('nav .mainMenu li a');
+            openMenu.addEventListener('click',show);
+            closeMenu.addEventListener('click',close);
+    
+            menu_items.forEach(item => {
+                item.addEventListener('click',function(){
+                close();
+                })
+            })
+    
+            function show(){
+                mainMenu.style.display = 'flex';
+                mainMenu.style.top = '0';
+            }
+            function close(){
+                mainMenu.style.top = '-100%';
+            }
+        
+  document.getElementById("bt1").addEventListener("click", function() {
+    if (validateForm()) {
+      alert("Thanks for booking us!!! We'll wait for your presence");
+      document.getElementById("contactForm").reset(); 
+    }
+  });
+
+  function validateForm() {
+    var name = document.forms["contactForm"]["name"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var dob = document.forms["contactForm"]["dob"].value;
+    var time = document.forms["contactForm"]["time"].value;
+    var number = document.forms["contactForm"]["number"].value;
+    var message = document.forms["contactForm"]["message"].value;
+
+    if (name === "" || email === "" || dob === "" || time === "" || number === "" || message === "") {
+      alert("Please fill in all fields.");
+      return false;
+    }
+
+    var namePattern = /^[A-Za-z]{5,30}$/;
+    if (!name.match(namePattern)) {
+      alert("Name pattern mismatch. It should contain 5 to 30 alphanumeric characters.");
+      return false;
+    }
+
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+      alert("Email pattern mismatch. Please enter a valid email address.");
+      return false;
+    }
+
+    var currentDate = new Date();
+    var selectedDate = new Date(dob);
+    if (selectedDate <= currentDate) {
+      alert("Invalid date. Please select a future date.");
+      return false;
+    }
+
+    var timePattern = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/;
+    if (!time.match(timePattern)) {
+      alert("Invalid time format. Please use HH:MM format (24-hour clock).");
+      return false;
+    }
+
+    if (isNaN(number) || number < 1 || number > 9) {
+      alert("Invalid number. Please enter a number between 1 and 9.");
+      return false;
+    }
+
+    return true;
+  }
+</script>
+
+   
+
+</body>
+
+</html>

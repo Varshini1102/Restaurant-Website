@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <title>THE SPICE DELIGHT</title>
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+        }
+        nav {
+            background-color: lavenderblush;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav .mainMenu {
+            display: flex;
+            list-style: none;
+        }
+        nav .mainMenu li a {
+            display: inline-block;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: Lavenda;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+        nav .mainMenu li a:hover {
+             background: palevioletred;
+        }
+        nav .openMenu {
+            font-size: 2rem;
+             margin: 20px;
+            display: none;
+            cursor: pointer;
+        }
+        nav .mainMenu .closeMenu{
+            font-size: 2rem;
+            display: none;
+            cursor: pointer;
+        }
+ 
+        .logo {
+        margin: 6px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+        font-family: Cafe Brasil;
+    }
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 70vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      transition: top 1s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: palevioletred;
+    }
+}
+   
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lavenderblush;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .review {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .review h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .review p {
+            font-size: 16px;
+        }
+
+        .rating .stars::before {
+            content: "\2605\2605\2605\2605\2605"; /* Default to 5 stars */
+            color: #f2b01e;
+        }
+
+        .rating .stars[data-rating="1"]::before {
+            content: "\2605\2606\2606\2606\2606"; /* 1 star */
+        }
+
+        .rating .stars[data-rating="2"]::before {
+            content: "\2605\2605\2606\2606\2606"; /* 2 stars */
+        }
+
+        .rating .stars[data-rating="3"]::before {
+            content: "\2605\2605\2605\2606\2606"; /* 3 stars */
+        }
+
+        .rating .stars[data-rating="4"]::before {
+            content: "\2605\2605\2605\2605\2606"; /* 4 stars */
+        }
+
+        .rating .stars[data-rating="5"]::before {
+            content: "\2605\2605\2605\2605\2605"; /* 5 stars */
+        }
+
+        .overall-rating {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><h1>THE SPICE DELIGHT</h1></div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="order.html">ORDER</a></li>
+            <li><a href="review.html">REVIEW</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="reserve.html">RESERVATION</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+    </nav>
+
+    <header>
+        <h1>Customer Reviews</h1>
+    </header>
+
+    <div class="container">
+        <div class="reviews-grid">
+            <div class="review">
+                <h2>Kiara</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="5"></span></p>
+                <p>Excellent food and service. I'll definitely be coming back!</p>
+            </div>
+
+            <div class="review">
+                <h2>Swetha</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="4"></span></p>
+                <p>Great atmosphere and friendly staff. The dessert was amazing.</p>
+            </div>
+      
+            <div class="review">
+                <h2>Iha</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="3"></span></p>
+                <p>Good food, but it was a bit noisy when we visited. Overall, a decent experience.</p>
+            </div>
+
+            <div class="review">
+                <h2>Rekha</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="3"></span></p>
+                <p>The restaurant offers a warm and inviting atmosphere, perfect for a cozy dining experience.The staff at The Spice Delight is friendly and attentive, providing excellent service.</p>
+            </div>
+            <div class="review">
+                <h2>Priya</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="4.5"></span></p>
+                <p>The Spice Delight is a hidden gem withe incredible falvors that will tantalize your taste buds!!</p>
+            </div>
+            <div class="review">
+                <h2>Pavithra</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="4.5"></span></p>
+                <p>The menu at The Spice Delight is diverse, offering a wide range of options to cater to every palate.Not only is the food at The Spice Delight flavorful, but the presentation is also top-notch.
+                </p>
+            </div>
+            <div class="review">
+                <h2>Sundar</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="3"></span></p>
+                <p>The prices at The Spice Delight are reasonable, providing great value for the exceptional quality of food."
+                    Whether you're a vegetarian or a meat lover, The Spice Delight has delicious options for everyone.</p>
+            </div>
+            <div class="review">
+                <h2>Nithya</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="4"></span></p>
+                <p>The most amazing food ever! And also the staff is so nice to everyone. I highly recommend buying food from here. The best pizza ever.</p>
+            </div>
+
+            <div class="review">
+                <h2>Afrin</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="4"></span></p>
+                <p>Fantastic food! It was very fresh and flavorful. We could tell it was just made for us. A little slow, but worth the wait. Yum!</p>
+            </div>
+            <div class="review">
+                <h2>Sekar</h2>
+                <p class="rating">Rating: <span class="stars" data-rating="4.5"></span></p>
+                <p>The food at The Spice Delight is absolutely delicious, each dish bursting with unique spices.</p>
+            </div>
+        </div>
+        <center>
+        <div class="overall-rating">
+            <span><b>Overall Rating: <span id="average-rating" data-rating="0"></span>/5</b></span>
+        </div>
+        </center>
+    </div>
+
+    <script>
+        // Get all the star rating elements
+        const starRatings = document.querySelectorAll('.stars');
+    
+        // Calculate the overall rating
+        let totalRatings = 0;
+        starRatings.forEach((starRating) => {
+            const rating = parseFloat(starRating.getAttribute('data-rating'));
+            totalRatings += rating;
+        });
+    
+        const averageRating = totalRatings / starRatings.length;
+        document.getElementById('average-rating').textContent = averageRating.toFixed(1);
+
+
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        const menu_items = document.querySelectorAll('nav .mainMenu li a');
+        openMenu.addEventListener('click',show);
+        closeMenu.addEventListener('click',close);
+
+        menu_items.forEach(item => {
+            item.addEventListener('click',function(){
+            close();
+            })
+        })
+
+        function show(){
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+        function close(){
+            mainMenu.style.top = '-100%';
+        }
+    </script>
+    
+</body>
+</html>
